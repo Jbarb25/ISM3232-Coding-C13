@@ -30,3 +30,10 @@ createEmployeeCard("John Spear", "Accountant")
 createEmployeeCard("Jake Little", "Financial Manager")
 
 
+//Task 3: Converting NodeLists to Arrays for Bulk Updates
+const nodeList = document.querySelectorAll('.employee-card'); //create an element that stores all queries associated with -card
+const arrayOfNodes = Array.from(nodeList); //for the items in the nodelist element, convert to an array
+arrayOfNodes.forEach( item => {  //for every item in the array of nodes, do the following
+        item.style.color = "#800000";  //change the text color to maroon in the printed html file
+        item.style.fontFamily = 'Courier'}); //change the text font to courier in the printed html file
+
