@@ -12,16 +12,21 @@ employeeCard.setAttribute('id', 'employeeCard'); //set the id of the new element
 employeeCard.innerHTML = `
     <h3>Employee Name: ${name} </h3>
     <p>Employee Position: ${position}</p>
-`;
-
-emContainerByID.appendChild(employeeCard); //add element employee card to the dashboard and the employeeContainer 
-
+    <button class = "remove-employee">Remove Employee</button>
+`; 
     //create remove button that removed the employee card when pressed
-const removeEmployeeButton = document.getElementById('remove-employee'); //pull the remove employee button by its ID remove-employee
+const removeEmployeeButton = employeeCard.querySelector('.remove-employee'); //pull the remove employee button by its ID remove-employee
 
 removeEmployeeButton.addEventListener('click', () => {
     emContainerByID.removeChild(employeeCard);
-});}
+});
+
+emContainerByID.appendChild(employeeCard);} //add element employee card to the dashboard and the employeeContainer 
+
 
     //Testing the function
 createEmployeeCard("Emma Dole", "Sales Representative")
+createEmployeeCard("John Spear", "Accountant")
+createEmployeeCard("Jake Little", "Financial Manager")
+
+
